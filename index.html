@@ -9,19 +9,28 @@
 
     <body>
         <header id="main-header">
+            <div id="header-container">
+                <h1>4000</h1>
+                <div id="header-income">
+                    <p>INCOME <span>+1000</span></p>
+                </div>
 
+                <div id="header-expenses">
+                    <p>EXPENSES <span>-950</span></p>
+                </div>
+            </div>
         </header>
 
         <main>
             <div id="input-section">
-                <select name="" id="">
-                    <option value="">+</option>
-                    <option value="">-</option>
+                <select name="options" id="select-menu">
+                    <option value="plus">+</option>
+                    <option value="minus">-</option>
                 </select>
 
                 <input type="text" placeholder="Source of the income|expense">
                 <input type="number" placeholder="Amount">
-                <button>Add</button>
+                <button id="addButton">Add</button>
             </div>
 
             <div id="income-expenses-container">
@@ -51,6 +60,7 @@
 
         </footer>
 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="js/script.js"></script>
     </body>
 </html>

@@ -10,12 +10,43 @@
     background-position: center;
     height: 50vh;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+#header-container{
+    text-align: center;
+   
+}
+#header-container p{
+    display: flex;
+    justify-content: space-between;
+}
+
+#header-income,
+#header-expenses{
+    color: #000;
+    padding: 10px;
+    width: 200px;
+    
+}
+#header-income{
+    background-color: #16a085;
+    
+}
+
+#header-expenses{
+    background-color: #c0392b;
+    
 }
 
 #input-section{
     padding: 20px;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #BDBDBD;
     text-align: center;
+    background-color: #dfe6e9;
 }
 
 #income-expenses-container{
@@ -60,7 +91,12 @@ ul{
 li{
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #BDBDBD;
     padding-bottom: 10px;
     padding-top: 5px;
+    background-color: #F5F5F5;
+}
+
+li:nth-child(even){
+    background-color: #E0E0E0;
 }
