@@ -8,11 +8,42 @@
     </head>
 
     <body>
-        <header>
+        <header id="main-header">
 
         </header>
 
         <main>
+            <div id="input-section">
+                <select name="" id="">
+                    <option value="">+</option>
+                    <option value="">-</option>
+                </select>
+
+                <input type="text" placeholder="Source of the income|expense">
+                <input type="number" placeholder="Amount">
+                <button>Add</button>
+            </div>
+
+            <div id="income-expenses-container">
+                <div id="earned-div" class="container">
+                    <h2 id="income-title"class="heading">Income Earned</h2>
+
+                    <ul id="income-sources">
+                        <li>Job <span>+500</span> </li>
+                        <li>YouTube <span>+100</span> </li>
+                    </ul>
+                </div>
+
+                <div id="spent-div" class="container">
+                    <h2 id="expenses-title"class="heading">Expenses</h2>
+
+                    <ul id="expenses-sources">
+                        <li>Barber shop <span>-20</span></li>
+                        <li>Phone bill <span>-60</span></li>
+                    </ul>
+
+                </div>
+            </div>
 
         </main>
 

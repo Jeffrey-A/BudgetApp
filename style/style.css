@@ -1,5 +1,66 @@
 *{
-    border: 0;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+#main-header{
+    background-image: url("../img/welcome.jpeg");
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+    width: 100%;
+}
+
+#input-section{
+    padding: 20px;
+    border-bottom: 1px solid #000;
+    text-align: center;
+}
+
+#income-expenses-container{
+    display: flex;
+    margin-top: 50px;
+    justify-content: space-around;
+}
+
+.heading{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container{
+    width: 30%;
+}
+
+input,select, button{ 
+    padding: 10px;
+}
+
+input[type="text"]{
+    width: 30%;
+}
+
+input[type="number"]{
+    width: 100px;
+}
+
+#expenses-title{
+    color: #D50000;
+}
+
+#income-title{
+    color: #1B5E20;
+}
+
+ul{
+    list-style: none;
+}
+
+li{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #000;
+    padding-bottom: 10px;
+    padding-top: 5px;
 }
