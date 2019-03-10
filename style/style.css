@@ -3,32 +3,30 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+body{
+    background-color: #C8E6C9;
+}
 #main-header{
     background-image: url("../img/welcome.jpeg");
     background-size: cover;
     background-position: center;
     height: 50vh;
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     color: #fff;
 }
 
-#header-container{
-    text-align: center;
-   
-}
-#header-container p{
-    display: flex;
-    justify-content: space-between;
-}
+/* #header-container{
+    width: 30%;
+} */
+
+/* #header-container p{
+   display: flex;
+   justify-content: space-between;
+} */
 
 #header-income,
 #header-expenses{
     color: #000;
-    padding: 10px;
     width: 200px;
     
 }
@@ -43,16 +41,16 @@
 }
 
 #input-section{
-    padding: 20px;
-    border-bottom: 1px solid #BDBDBD;
+    padding: 15px;
+    border-bottom: 1px solid #16a085;
     text-align: center;
     background-color: #dfe6e9;
 }
 
 #income-expenses-container{
-    display: flex;
+   
     margin-top: 50px;
-    justify-content: space-around;
+    
 }
 
 .heading{
@@ -89,12 +87,11 @@ ul{
 }
 
 li{
-    display: flex;
-    justify-content: space-between;
+   display: flex;
+   justify-content: space-between;
     border-bottom: 1px solid #BDBDBD;
-    padding-bottom: 10px;
-    padding-top: 5px;
     background-color: #F5F5F5;
+    padding: 10px 5px 5px 5px;
 }
 
 li:nth-child(even){

@@ -4,25 +4,35 @@
     <head>
         <title>Budget App</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="style/style.css">
     </head>
 
     <body>
+        <!-- #############
+            HEADER SECTION
+        ############# -->
         <header id="main-header">
-            <div id="header-container">
-                <h1>4000</h1>
-                <div id="header-income">
+            <div id="header-container" class="container-fluid text-center pt-5 ">
+                <div class="row ">
+                    <h1 class="display-3 text-center mx-auto">4000</h1>
+                </div>
+                
+                <div id="header-income" class="row pt-2 mx-auto">
                     <p>INCOME <span>+1000</span></p>
                 </div>
 
-                <div id="header-expenses">
+                <div id="header-expenses" class="row pt-2 mx-auto">
                     <p>EXPENSES <span>-950</span></p>
                 </div>
             </div>
         </header>
 
         <main>
-            <div id="input-section">
+            <!-- #############
+            INPUT SECTION
+            ############# -->
+            <div id="input-section" class="container-fluid">
                 <select name="options" id="select-menu">
                     <option value="plus">+</option>
                     <option value="minus">-</option>
@@ -33,24 +43,37 @@
                 <button id="addButton">Add</button>
             </div>
 
-            <div id="income-expenses-container">
-                <div id="earned-div" class="container">
-                    <h2 id="income-title"class="heading">Income Earned</h2>
 
-                    <ul id="income-sources">
-                        <li>Job <span>+500</span> </li>
-                        <li>YouTube <span>+100</span> </li>
-                    </ul>
-                </div>
+            <!-- ###################
+            INCOME AND EXPENSES DIVS
+            ######################## -->            
+            <div id="income-expenses-container" class="container-fluid px-5">
+                <div class="row">
 
-                <div id="spent-div" class="container">
-                    <h2 id="expenses-title"class="heading">Expenses</h2>
+                    <!-- #############
+                    INCOME SECTION
+                    ############# -->
+                    <div id="earned-div" class="col">
+                        <h2 id="income-title"class="heading">Income Earned</h2>
+                        <ul id="income-sources">
+                            <li>Job <span>+500</span> </li>
+                            <li>YouTube <span>+100</span> </li>
+                        </ul>
+                    </div>
+                
 
-                    <ul id="expenses-sources">
-                        <li>Barber shop <span>-20</span></li>
-                        <li>Phone bill <span>-60</span></li>
-                    </ul>
+                    <!-- #############
+                    EXPENSES SECTION
+                    ############# -->
+                    <div id="spent-div" class="col">
+                        <h2 id="expenses-title"class="heading">Expenses</h2>
 
+                        <ul id="expenses-sources">
+                            <li>Barber shop <span>-20</span></li>
+                            <li>Phone bill <span>-60</span></li>
+                        </ul>
+
+                    </div>
                 </div>
             </div>
 
@@ -60,8 +83,13 @@
 
         </footer>
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <script src="js/script.js"></script>
+  
+    </body>
+        
     </body>
 </html>
 
