@@ -94,6 +94,24 @@ li{
     padding: 10px 5px 5px 5px;
 }
 
+
+
 li:nth-child(even){
     background-color: #E0E0E0;
+}
+
+.deleteBt{
+    width: 30px;
+    height: 30px;
+    display: none;
+}
+
+.deleteBt:hover{
+    cursor: pointer;
+}
+
+.deleteBtActive{
+    width: 30px;
+    height: 30px;
+    display: inline-block;
 }

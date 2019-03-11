@@ -6,13 +6,22 @@ var $ulExpenses = $("#expenses-sources");
 var $options = $("#select-menu option")
 var $totalIncome = $("#totalIncome");
 var $totalExpenses = $("#totalExpenses");
+var $li = $('li');
 
 var $finalIncome = $("#finalIncome");
 
 
 
+// var $delete = $(".deleteBt")[0];
 
-
+// for(var i =0; i<$li.length; i+=1){
+//     $($li[i]).hover(function(){
+//         $delete = $(".deleteBt")[i];
+//         $($delete).toggleClass("deleteBtActive");
+        
+        
+//     });
+// }
 
 function getTotal($array){
     var total =0;
@@ -85,3 +94,4 @@ $amount.on('keypress', function(e){
         main();
     }
 });
+
