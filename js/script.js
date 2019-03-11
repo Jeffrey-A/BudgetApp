@@ -9,8 +9,7 @@ var $totalExpenses = $("#totalExpenses");
 
 var $finalIncome = $("#finalIncome");
 
-var $incomeValues = $("#income-sources span");
-var $expensesValues = $("#expenses-sources span");
+
 
 
 
@@ -28,7 +27,12 @@ var totalIncomeSum;
 var totalExpensesSum;
 var totalIncomeValue;
 var totalExpensesValue
+var $incomeValues;
+var $expensesValues;
+
 function setUp(){
+    $incomeValues = $("#income-sources span");
+    $expensesValues = $("#expenses-sources span");
     totalIncomeSum = getTotal($incomeValues);
     totalExpensesSum = getTotal($expensesValues);
     $totalIncome.text(totalIncomeSum);
