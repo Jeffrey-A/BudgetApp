@@ -33,14 +33,16 @@
             INPUT SECTION
             ############# -->
             <div id="input-section" class="container-fluid">
-                <select name="options" id="select-menu">
-                    <option value="plus" selected>+</option>
-                    <option value="minus" >-</option>
-                </select>
+                <div class="input-group row">
+                    <select class="col custom-select " name="options" id="select-menu">
+                        <option value="plus" selected>+</option>
+                        <option value="minus" >-</option>
+                    </select>
 
-                <input type="text" placeholder="Source of the income|expense">
-                <input type="number" placeholder="Amount">
-                <button id="addButton">Add</button>
+                    <input class="col-6"type="text" placeholder="Text description">
+                    <input class="col" type="number" placeholder="Amount">
+                    <button class="col" id="addButton">Add</button>
+                </div>
             </div>
 
 

@@ -15,15 +15,6 @@ body{
     color: #fff;
 }
 
-/* #header-container{
-    width: 30%;
-} */
-
-/* #header-container p{
-   display: flex;
-   justify-content: space-between;
-} */
-
 #main-header p{
     width: 100%;
     display: flex;
@@ -66,21 +57,19 @@ body{
     margin-bottom: 20px;
 }
 
-.container{
-    width: 30%;
-}
 
-input,select, button{ 
+
+/* input,select, button{ 
     padding: 10px;
-}
+} */
 
-input[type="text"]{
+/* input[type="text"]{
     width: 30%;
 }
 
 input[type="number"]{
     width: 100px;
-}
+} */
 
 #expenses-title{
     color: #D50000;

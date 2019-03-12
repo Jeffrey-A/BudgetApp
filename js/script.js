@@ -11,10 +11,29 @@ var $li = $('li');
 var $finalIncome = $("#finalIncome");
 
 
+
+
+
+
+var deleteB;
 $li.each(function(){
-    $(this).on('click',function(){
-        var deleteB = $($(this).children()[1]);
+    $(this).on('mouseover',function(){
+        var currentLI = $(this);
+        deleteB = $(currentLI.children()[1]);
         deleteB.show();
+
+        deleteB.on("click", function(){
+            currentLI.remove();
+            setUp();
+        });
+
+    });
+});
+
+$li.each(function(){
+    $(this).on('mouseout',function(){
+        deleteB = $($(this).children()[1]);
+        deleteB.hide();
 
     });
 });
@@ -58,12 +77,52 @@ function clearInput(){
 }
 
 function createIncomeElement($text,$amount ){
-    $ulIncome.append("<li>"+$text.val()+"<span>+"+$amount.val()+"</span>"+"</li>");
+    var newLi = $("<li>"+$text.val()+"<span>+"+$amount.val()+"</span>"+"</li>");
+    var $deleteButtonImg = $('<img></img>').attr('src','img/delete.png');
+    $deleteButtonImg.addClass('deleteBt');
+
+    newLi.append($deleteButtonImg);
+    newLi.on("mouseover", function(){
+        $deleteButtonImg.show();
+
+        $deleteButtonImg.on("click", function(){
+            newLi.remove();
+            setUp();
+        });
+    });
+
+    newLi.on('mouseout',function(){
+        deleteBu = $($(this).children()[1]);
+        deleteBu.hide();
+
+    });
+
+    $ulIncome.append(newLi);
     clearInput();
 }
 
 function createExpensesElement($text,$amount ){
-    $ulExpenses.append("<li>"+$text.val()+"<span>-"+$amount.val()+"</span>"+"</li>");
+    var newLi = $("<li>"+$text.val()+"<span>-"+$amount.val()+"</span>"+"</li>");
+    var $deleteButtonImg = $('<img></img>').attr('src','img/delete.png');
+    $deleteButtonImg.addClass('deleteBt');
+
+    newLi.append($deleteButtonImg);
+    newLi.on("mouseover", function(){
+        $deleteButtonImg.show();
+
+        $deleteButtonImg.on("click", function(){
+            newLi.remove();
+            setUp();
+        });
+    });
+
+    newLi.on('mouseout',function(){
+        deleteBu = $($(this).children()[1]);
+        deleteBu.hide();
+
+    });
+
+    $ulExpenses.append(newLi);
     clearInput();
 }
 
