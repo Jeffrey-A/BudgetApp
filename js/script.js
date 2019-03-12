@@ -11,6 +11,13 @@ var $li = $('li');
 var $finalIncome = $("#finalIncome");
 
 
+$li.each(function(){
+    $(this).on('click',function(){
+        var deleteB = $($(this).children()[1]);
+        deleteB.show();
+
+    });
+});
 
 
 
@@ -36,7 +43,7 @@ function setUp(){
     $expensesValues = $("#expenses-sources span");
     totalIncomeSum = getTotal($incomeValues);
     totalExpensesSum = getTotal($expensesValues);
-    $totalIncome.text(totalIncomeSum);
+    $totalIncome.text("+"+totalIncomeSum);
     $totalExpenses.text(totalExpensesSum);
     totalIncomeValue = parseInt($totalIncome.text());
     totalExpensesValue = parseInt($totalExpenses.text());
@@ -51,12 +58,12 @@ function clearInput(){
 }
 
 function createIncomeElement($text,$amount ){
-    $ulIncome.append("<li>"+$text.val()+"+<span>"+$amount.val()+"</span>"+"</li>");
+    $ulIncome.append("<li>"+$text.val()+"<span>+"+$amount.val()+"</span>"+"</li>");
     clearInput();
 }
 
 function createExpensesElement($text,$amount ){
-    $ulExpenses.append("<li>"+$text.val()+"-<span>"+$amount.val()+"</span>"+"</li>");
+    $ulExpenses.append("<li>"+$text.val()+"<span>-"+$amount.val()+"</span>"+"</li>");
     clearInput();
 }
 
