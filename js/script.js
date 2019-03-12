@@ -12,16 +12,8 @@ var $finalIncome = $("#finalIncome");
 
 
 
-// var $delete = $(".deleteBt")[0];
 
-// for(var i =0; i<$li.length; i+=1){
-//     $($li[i]).hover(function(){
-//         $delete = $(".deleteBt")[i];
-//         $($delete).toggleClass("deleteBtActive");
-        
-        
-//     });
-// }
+
 
 function getTotal($array){
     var total =0;
