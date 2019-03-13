@@ -13,7 +13,7 @@ var $finalIncome = $("#finalIncome");
 
 
 
-
+//Adding events to li elements
 
 var deleteB;
 $li.each(function(){
@@ -40,7 +40,7 @@ $li.each(function(){
 
 
 
-
+//add all the values in the array passed
 function getTotal($array){
     var total =0;
     $array.each(function(){
@@ -50,6 +50,11 @@ function getTotal($array){
     return total;
 }
 
+//calcuates the percentage of expenses
+function expensesPercentage(income,expense){
+    return (expense/income)*100;
+}
+
 var totalIncomeSum;
 var totalExpensesSum;
 var totalIncomeValue;
@@ -57,27 +62,36 @@ var totalExpensesValue
 var $incomeValues;
 var $expensesValues;
 
+//makes all real the time  claculations 
 function setUp(){
     $incomeValues = $("#income-sources span");
     $expensesValues = $("#expenses-sources span");
     totalIncomeSum = getTotal($incomeValues);
     totalExpensesSum = getTotal($expensesValues);
-    $totalIncome.text("+"+totalIncomeSum);
+    $totalIncome.text(totalIncomeSum);
     $totalExpenses.text(totalExpensesSum);
     totalIncomeValue = parseInt($totalIncome.text());
     totalExpensesValue = parseInt($totalExpenses.text());
     $finalIncome.text(""+(totalIncomeValue - totalExpensesValue));
+    console.log(expensesPercentage(totalIncomeValue,totalExpensesValue));//temporal
+    //need to calculate the percentage of each li expense values. using the total income.
+    //the function expensesPercentage is working fine, but I need to round the result.
+    // also need to include that percentage into the li elements
 }
 
 setUp();
 
+
+//clears the inputs field
 function clearInput(){
     $text.val("");
     $amount.val("");
 }
 
+
+//creates a new li element in the income section
 function createIncomeElement($text,$amount ){
-    var newLi = $("<li>"+$text.val()+"<span>+"+$amount.val()+"</span>"+"</li>");
+    var newLi = $("<li>"+$text.val()+"<span>"+$amount.val()+"</span>"+"</li>");
     var $deleteButtonImg = $('<img></img>').attr('src','img/delete.png');
     $deleteButtonImg.addClass('deleteBt');
 
@@ -101,8 +115,9 @@ function createIncomeElement($text,$amount ){
     clearInput();
 }
 
+//creates a new li element in the expenses section
 function createExpensesElement($text,$amount ){
-    var newLi = $("<li>"+$text.val()+"<span>-"+$amount.val()+"</span>"+"</li>");
+    var newLi = $("<li>"+$text.val()+"<span>"+$amount.val()+"</span>"+"</li>");
     var $deleteButtonImg = $('<img></img>').attr('src','img/delete.png');
     $deleteButtonImg.addClass('deleteBt');
 
@@ -126,6 +141,8 @@ function createExpensesElement($text,$amount ){
     clearInput();
 }
 
+
+//main function. create li elements and update the final income value
 function main(){
     for(var i=0; i<$options.length; i+=1){
         if ($options[i].selected && $($options[i]).val() === "plus"){
@@ -141,7 +158,7 @@ function main(){
     
 }
 
-
+//event handlers
 $addButton.on('click',function(){
     main();  
 });

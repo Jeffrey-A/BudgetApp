@@ -59,17 +59,10 @@ body{
 
 
 
-/* input,select, button{ 
-    padding: 10px;
-} */
-
-/* input[type="text"]{
-    width: 30%;
+.input-group{
+    width: 60%;
+    margin: 0 auto;
 }
-
-input[type="number"]{
-    width: 100px;
-} */
 
 #expenses-title{
     color: #D50000;
