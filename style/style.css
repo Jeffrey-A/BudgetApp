@@ -30,7 +30,7 @@
     
 }
 #finalIncome{
-    text-shadow: 1px 1px 3px #000;
+    text-shadow: 0.5px 0 3px #000;
 }
 
 #header-income{
@@ -114,4 +114,21 @@ li:nth-child(even){
 
 .deleteBtActive{
     display: inline-block;
+}
+
+@media(max-width: 945px){
+    .input-group{
+        width: 90%;
+    }
+    
+}
+
+@media(max-width:768px){
+    .deleteBt{
+        display: inline-block;
+    }
+     li{
+        justify-content: space-between;
+        
+    }
 }
