@@ -1,3 +1,4 @@
+
 var $text = $("input[type=text]");
 var $amount = $("input[type=number]");;
 var $addButton = $("#addButton");
@@ -7,11 +8,42 @@ var $options = $("#select-menu option")
 var $totalIncome = $("#totalIncome");
 var $totalExpenses = $("#totalExpenses");
 var $li = $('li');
-
+var $select = $('#select-menu');
 var $finalIncome = $("#finalIncome");
 
 
 
+$( document ).ready(function() {
+    setUp();
+    $text.addClass("incomeColor");
+    $amount.addClass("incomeColor");
+});
+
+
+
+
+
+//Check if your adding an income or expense and change the outlines of the input fields
+$select.change(function(){
+    var options = $select.children();
+    for (var i=0; i < options.length; i+=1){
+        if(options[i].selected && options[i].value=="plus"){
+            $text.removeClass('expenseColor');
+            $amount.removeClass('expenseColor');
+
+            $text.addClass("incomeColor");
+            $text.attr('placeHolder','Income description')
+            $amount.addClass("incomeColor");
+            break;
+
+        }else{
+            $text.addClass("expenseColor");
+            $text.attr('placeHolder','Expense description')
+            $amount.addClass("expenseColor");
+            break;
+        }
+    }
+});
 
 //Adding events to li elements
 
@@ -79,7 +111,7 @@ function setUp(){
     // also need to include that percentage into the li elements
 }
 
-setUp();
+
 
 
 //clears the inputs field

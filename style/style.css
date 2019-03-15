@@ -3,9 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{
-    
-}
+
 #main-header{
     background-image: url("../img/welcome2.jpg");
     background-size: cover;
@@ -14,6 +12,7 @@ body{
     width: 100%;
     color: #fff;
 }
+
 
 #main-header p{
     width: 100%;
@@ -27,8 +26,13 @@ body{
     width: 200px;
     padding-left: 5px;
     padding-right: 5px;
+    width:40%;
     
 }
+#finalIncome{
+    text-shadow: 1px 1px 3px #000;
+}
+
 #header-income{
     background-color: #16a085;
     
@@ -44,6 +48,14 @@ body{
     border-bottom: 1px solid #16a085;
     text-align: center;
     background-color: #dfe6e9;
+}
+
+.incomeColor:focus{
+    outline-color: #2ecc71;
+}
+
+.expenseColor:focus{
+    outline-color: #e74c3c;
 }
 
 #income-expenses-container{
