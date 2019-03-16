@@ -192,13 +192,22 @@ function main(){
 
 //event handlers
 $addButton.on('click',function(){
-    main();  
+    if ($amount.val() !==""){
+        main();  
+    }else{
+        alert("You need to type the description and amount."); 
+    }
+    
 });
 
 $amount.on('keypress', function(e){
     var key = e.keyCode;
     if (key == 13){
-        main();
+        if ($amount.val() !==""){
+            main();  
+        }else{
+            alert("You need to type the description and amount."); 
+        }
     }
 });
 

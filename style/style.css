@@ -126,6 +126,8 @@ li:nth-child(even){
 @media(max-width:768px){
     .deleteBt{
         display: inline-block;
+        width:20px;
+        height: 20px;
     }
      li{
         justify-content: space-between;
